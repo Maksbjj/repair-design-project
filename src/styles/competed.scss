@@ -1,0 +1,43 @@
+.competed {
+  height: 700px;
+  background-color: $black;
+  display: flex;
+  flex-wrap: wrap;
+
+
+  .competed__nav {
+    height: 24px;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .nav__text {
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+      text-transform: uppercase;
+      padding: 1em;
+    }
+
+  }
+
+  .competed__text {
+    margin-left: 100px;
+    display: flex;
+    width: 425px;
+    height: 507px;
+    background: red;
+  }
+
+  .competed__photo {
+    margin-left: 50px;
+    background: url(/src/assets/images/competed-image.png);
+    display: flex;
+    width: 847px;
+    height: 507px;
+  }
+}

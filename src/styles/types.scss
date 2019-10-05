@@ -1,0 +1,17 @@
+.types {
+  height: 760px;
+  background-color: white;
+
+  .types__logo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .types__repairs {
+    height: 608px;
+    width: 1236px;
+    margin: 0 auto;
+    background: red;
+  }
+}

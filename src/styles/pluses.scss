@@ -1,0 +1,17 @@
+.pluses {
+  height: 860px;
+  background-color: white;
+  display: flex;
+
+  .pluses__circle {
+    background: url(/src/assets/images/pluses-bg.png);
+    height: 650px;
+    flex: 1;
+  }
+
+  .pluses__form {
+    background-color: $black;
+    height: 650px;
+    flex: 1;
+  }
+}

@@ -1,0 +1,22 @@
+.online-control {
+  height: 1050px;
+  background-color: white;
+
+  .online-control__logo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+  }
+
+  .online-control__video {
+    display: flex;
+    background: url(/src/assets/images/online-contro-video.png);
+    height: 434px;
+    width: 818px;
+    background-size: cover;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+  }
+}

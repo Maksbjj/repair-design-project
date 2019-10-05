@@ -1,0 +1,26 @@
+.steps {
+  height: 770px;
+  background-color: $black;
+  display: flex;
+
+  .steps__text {
+    flex: 1;
+    background: red;
+  }
+
+  .steps__numbers {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .steps {
+      flex: 1;
+    }
+
+    .photo {
+      flex: 1;
+      background: url(/src/assets/images/steps-photo.png);
+      background-size: cover;
+    }
+  }
+}
