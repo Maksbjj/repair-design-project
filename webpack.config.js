@@ -1,21 +1,22 @@
-const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
+const path = require("path");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  entry: './src/index.js',
-  mode: "production",
+  entry: "./src/index.js",
+  mode: "development",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js"
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
+    contentBase: path.join(__dirname, "dist"),
+    compress: false,
     port: 9000,
     hot: true
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.s[ac]ss$/i,
         use: ["style-loader", "css-loader", "sass-loader"]
       },
@@ -24,14 +25,21 @@ module.exports = {
         use: ["file-loader"]
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        test: /\.(otf|woff|woff2|eot|ttf|)$/,
         use: ["file-loader"]
       }
     ]
   },
-
-  plugins: [new CopyPlugin([{
-    from: "./index.html",
-    to: "./index.html"
-  }])]
+  plugins: [
+    new CopyPlugin([
+      {
+        from: "./index.html",
+        to: "./index.html"
+      },
+      {
+        from: "./src/assets/",
+        to: "images"
+      }
+    ])
+  ]
 };

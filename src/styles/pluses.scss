@@ -1,17 +1,296 @@
 .pluses {
-  height: 860px;
   background-color: white;
   display: flex;
+  position: relative;
+
+  @include desktop {
+    display: none;
+  }
+
 
   .pluses__circle {
-    background: url(/src/assets/images/pluses-bg.png);
-    height: 650px;
+    background: url(../assets/images/pluses-bg.png);
+    background-repeat: no-repeat;
     flex: 1;
+    height: 650px;
+    z-index: 1;
+    position: relative;
+    padding-bottom: 300px;
+
+    .circle {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+
+
+
+
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $orange;
+        width: 44px;
+        height: 42.5px;
+        border-radius: 50%;
+        border: 15px solid white;
+        font-family: 'Yeseva One';
+        font-size: 0.8125rem;
+        line-height: 1.25rem;
+        text-transform: uppercase;
+        color: #FFFFFF;
+      }
+
+      .text {
+        font-family: 'FuturaMediumC';
+        font-size: 1.125rem;
+        line-height: 1.3125rem;
+        color: $grey;
+        width: 365px;
+
+        @media (max-width:1400px) {
+          display: none;
+        }
+
+        @media (max-width:1150px) {
+          display: flex;
+        }
+
+      }
+    }
+
+    .circle1 {
+      top: 85px;
+      left: 406px;
+    }
+
+    .circle2 {
+      top: 213px;
+      left: 485px;
+    }
+
+    .circle3 {
+      top: 381px;
+      left: 509px;
+    }
+
+    .circle4 {
+      top: 547px;
+      left: 441px;
+    }
+
+
+  }
+
+  .border__circle {
+    position: absolute;
+    top: 34px;
+    left: -108px;
+    width: 650px;
+    height: 675px;
+    border-radius: 50%;
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to right, #fff 0%, #fff 20%, #fff 20%, #E3B873 100%) border-box;
+    border: 3px solid transparent;
+
+
+
+
   }
 
   .pluses__form {
-    background-color: $black;
-    height: 650px;
-    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #131313;
+    padding: 0 50px;
+    height: 519px;
+    width: 435px;
+    margin-top: 87px;
+
+    @media (max-width:1150px) {
+      display: none;
+    }
+
+    .form__header {
+      padding-top: 25px;
+      width: 60%;
+      font-family: 'FuturaDemiC';
+      font-size: 1.25rem;
+      line-height: 1.5625rem;
+      text-align: center;
+      color: white;
+    }
+
+    .grid {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0px;
+      width: 100%;
+
+      form {
+        display: grid;
+        width: 420px;
+        grid-template-areas:
+          "name"
+          "phone"
+          "email"
+          "checkbox"
+          "submit";
+        grid-template-columns: 100%;
+
+        @include mobile {}
+
+        .grid {
+          display: flex;
+          flex-direction: column;
+
+          input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(54, 54, 54, 0.5);
+            padding-bottom: 0.625rem;
+
+            &:focus::-webkit-input-placeholder {
+              color: transparent;
+            }
+
+            &::placeholder {
+              color: white;
+            }
+
+            @include mobile {
+              color: white;
+              border-bottom: 1px solid white;
+
+              &::placeholder {
+                color: white;
+              }
+            }
+          }
+
+          .label {
+            font-family: "FuturaBook";
+            font-size: 0.9375rem;
+            line-height: 1.25rem;
+            color: rgba(255, 255, 255, 0.5);
+
+            @include mobile {
+              color: rgba(255, 255, 255, 0.5);
+            }
+          }
+        }
+      }
+
+      .name {
+        grid-area: name;
+
+        @include mobile {}
+      }
+
+      .phone {
+        grid-area: phone;
+
+
+        @include mobile {}
+      }
+
+      .email {
+        grid-area: email;
+
+        @include mobile {
+          padding: 0px 18px;
+        }
+      }
+
+      .pluses__button {
+        grid-area: submit;
+
+        @include mobile {
+          padding: 0px 18px;
+        }
+
+        .submit {
+          margin-left: 242px;
+          width: 50%;
+          background: #e3b873;
+          box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+          border: none;
+          font-family: 'FuturaDemiC';
+          font-size: 0.8125rem;
+          line-height: 1.125rem;
+          text-align: center;
+          text-transform: uppercase;
+
+          color: #FFFFFF;
+
+          @include mobile {
+            width: 100%;
+          }
+        }
+      }
+
+      .checkbox {
+        grid-area: checkbox;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 50px;
+
+        @include mobile {
+          padding: 20px 0px 65px;
+        }
+
+        .check {
+          background: #e3b873;
+          border-radius: 1px;
+          width: 1.125rem;
+          height: 1.125rem;
+        }
+
+        .label {
+          font-family: "FuturaBook";
+          font-size: 1rem;
+          line-height: 1.375rem;
+          color: white;
+          position: relative;
+
+          @include mobile {
+            color: white;
+          }
+        }
+      }
+
+
+    }
+
+    .icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding-top: 52px;
+
+
+      .image {
+        display: flex;
+        justify-content: center;
+        width: 76.34px;
+        height: 73.54px;
+        background: $orange;
+        border-radius: 50%;
+        margin-right: 26px;
+      }
+
+      .text {
+        font-family: 'FuturaDemiC';
+        font-size: 1.25rem;
+        line-height: 1.5625rem;
+        color: $orange;
+        text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+      }
+    }
   }
 }

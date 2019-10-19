@@ -1,14 +1,64 @@
+@import "./reset.scss";
+
+@import "./mixins.scss";
+@import "./fonts.scss";
 @import "./colors.scss";
-@import "./repair.scss";
+@import "./button.scss";
+
+@import "./hero.scss";
 @import "./online-control.scss";
 @import "./types.scss";
 @import "./pluses.scss";
 @import "./realize.scss";
 @import "./design.scss";
-@import "./repair.scss";
 @import "./steps.scss";
 @import "./team.scss";
+@import "./clients.scss";
 @import "./colors.scss";
-@import "./reset.scss";
 @import "./competed.scss";
-@import "./fonts.scss"
+@import "./map.scss";
+@import "./footer.scss";
+
+html {
+  font-size: 16px;
+
+  @include mobile {
+    font-size: 12px;
+  }
+
+  ol,
+  ul {
+    list-style: square;
+  }
+}
+
+.logo__text {
+  font-family: "Yeseva One";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.logo__text {
+  font-family: "Yeseva One";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button {
+  background: #E3B873;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+  font-family: 'Yeseva One';
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}

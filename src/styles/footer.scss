@@ -1,0 +1,85 @@
+.footer {
+  margin-top: -1px;
+  background-color: $black;
+  height: 5.125rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  white-space: nowrap;
+
+  @include mobile {
+    display: none;
+  }
+
+  .footer__logo {
+    display: flex;
+    font-family: "FuturaDemiC";
+    text-transform: uppercase;
+    color: #e3b873;
+    align-content: center;
+    justify-content: center;
+    margin-left: 4.75rem;
+  }
+
+  .footer__nav {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+
+    .nav__text {
+      padding: 1em;
+      font-family: "FuturaBook";
+      text-transform: uppercase;
+
+      &:first-of-type {
+        color: #e3b873;
+      }
+
+      display: none;
+
+      @include desktop-big {
+        display: block;
+      }
+    }
+  }
+
+  .footer__phone {
+    display: flex;
+    font-family: "FuturaDemiC";
+    text-align: right;
+    text-decoration-line: underline;
+    color: #e3b873;
+    align-content: center;
+    justify-content: center;
+    margin-right: 2em;
+
+    @include mobile {
+      color: white;
+      text-decoration-line: none;
+    }
+  }
+
+  .footer__button {
+    background: #e3b873;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    margin-right: 4.75rem;
+
+    span {
+      font-family: "FuturaDemiC";
+      font-size: 0.8125rem;
+      line-height: 0.9375rem;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+}

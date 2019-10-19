@@ -1,4 +1,150 @@
 .clients {
-  height: 2000px;
   background-color: white;
+
+  @include mobile {
+    display: none;
+  }
+
+  .clients__logo {
+    margin-bottom: 1.5625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .logo__text {
+      color: black;
+      padding-top: 5.5rem;
+    }
+  }
+
+  .clients__text {
+    width: 23.875rem;
+    margin: 0 auto;
+    justify-content: center;
+    font-family: "FuturaBook";
+    font-size: 1.25rem;
+    line-height: 1.6875rem;
+    text-align: center;
+    color: $black;
+    padding-bottom: 4.875rem;
+
+    @include mobile {
+      color: white;
+
+      margin-left: 1.125rem;
+      margin-right: 1.125rem;
+    }
+  }
+
+  .clients__members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 10.3125rem;
+
+    @include mobile {
+      justify-content: center;
+    }
+
+    .second {
+      margin-left: 55px;
+      margin-right: 55px;
+
+      @media (max-width:1240px) {
+        margin-right: 0px;
+      }
+
+      @media (max-width:840px) {
+        margin-left: 0px;
+      }
+    }
+
+    .first,
+    .second,
+    .third {
+      position: relative;
+      height: 23.75rem;
+      width: 23.5rem;
+      margin-bottom: 62px;
+      padding-bottom: 30px;
+      padding-left: 1.25rem;
+      box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+
+
+
+      .members__header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 1.5rem;
+
+        img {
+          border-radius: 50%;
+        }
+
+        .name {
+          width: 11.125rem;
+          padding-left: 1.4375rem;
+          font-family: "Yeseva One";
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.125rem;
+          line-height: 1.4375rem;
+          color: #181818;
+        }
+      }
+
+      @include mobile {
+        padding-bottom: 7.8125rem;
+      }
+    }
+
+    .info {
+      width: 20.3125rem;
+      font-family: 'FuturaBook';
+      font-size: 0.9375rem;
+      line-height: 1.6875rem;
+      color: #959595;
+      padding-top: 1.4375rem;
+    }
+
+    .buttons {
+      width: 18.4375rem;
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      bottom: -1.625rem;
+      left: 0;
+
+
+
+      .button {
+        display: flex;
+        flex-direction: row;
+        height: 3.375rem;
+        background: $orange;
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+        font-family: "Yeseva One";
+        font-size: 1.0625rem;
+        line-height: 1.5rem;
+        text-transform: uppercase;
+        color: #ffffff;
+
+        &.button--first {
+          border-right: 0.75px solid #FFFFFF;
+        }
+
+        @include mobile {
+          font-size: 0.9125rem;
+        }
+
+        .button__text {
+          padding-left: 0.9375rem;
+        }
+      }
+    }
+  }
 }

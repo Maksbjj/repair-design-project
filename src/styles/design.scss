@@ -1,10 +1,148 @@
 .design {
-  height: 1000px;
-  background-color: white;
+  background: linear-gradient(180deg, white 46.4%, $black 46.5%);
+
+  @include mobile @include desktop {
+    background: $black;
+  }
+
+  .options__img {
+    background: #131313;
+
+    img {
+      opacity: 0.5;
+
+      @include mobile {
+        opacity: 1;
+      }
+    }
+  }
 
   .design__logo {
+    margin-bottom: 25px;
     display: flex;
-    align-content: center;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+
+    .logo__text {
+      margin-top: 115px;
+      color: $black;
+
+      @include mobile @include desktop {
+        color: white;
+        margin-top: 52px;
+      }
+    }
+  }
+
+  .design__text {
+    margin: 0 auto;
+    justify-content: center;
+    font-family: 'FuturaBook';
+    font-size: 1.25rem;
+    line-height: 1.6875rem;
+    text-align: center;
+    color: $grey;
+    margin-bottom: 39px;
+
+    @include mobile @include desktop {
+      color: white;
+      margin-left: 18px;
+      margin-right: 18px;
+    }
+  }
+
+  .design__options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    span {
+      font-family: 'Yeseva One';
+      font-size: 1.125rem;
+      line-height: 1.5625rem;
+      color: #363636;
+    }
+
+    .info {
+      position: absolute;
+      left: 2.1875rem;
+      top: 18.375rem;
+      width: 20.625rem;
+      background: #FFFFFF;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+      font-family: 'FuturaBook';
+      color: #959595;
+
+      @include mobile {
+        left: -1px;
+      }
+
+      .list {
+        margin-top: 25px;
+        margin-left: 34px;
+        line-height: 1.875rem;
+        margin-bottom: 55px;
+      }
+
+      .button {
+        position: absolute;
+        bottom: -1.625rem;
+        width: 14.25rem;
+        height: 3.375rem;
+        background: $orange;
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+        font-family: 'Yeseva One';
+        font-size: 1.125rem;
+        line-height: 1.5625rem;
+        text-transform: uppercase;
+        color: #FFFFFF;
+      }
+    }
+
+
+
+
+    .first {
+      height: 34.3875rem;
+    }
+
+    .second {
+      height: 39.9875rem;
+    }
+
+    .third {
+      height: 49.3875rem;
+
+      @include mobile @include desktop {
+        height: 43.9875rem;
+
+
+        .list {
+          ul {
+            li:nth-child(n+8) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .option {
+      margin: 0px 10px 60px 10px;
+      position: relative;
+
+
+
+      @include mobile @include desktop {
+        margin: 0px 18px 60px 18px;
+      }
+    }
+
+    .first img,
+    .second img,
+    .third img {
+      width: 100%;
+    }
   }
 }

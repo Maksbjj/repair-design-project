@@ -1,5 +1,133 @@
 .realize {
-  height: 1020px;
-  background: url(/src/assets/images/realize-bg.png);
-  background-size: cover;
+  background: white;
+  margin-bottom: -1px;
+
+  @include mobile {
+    background: linear-gradient(180deg, white 52.2%, $black 47.8%);
+  }
+
+  .realize__bg {
+    position: relative;
+    background: black;
+    height: 865px;
+    display: flex;
+
+    @include mobile {
+      height: 242px;
+      margin: 0 18px;
+      background: linear-gradient(180deg, #131313 45.9%, white 45.9%);
+    }
+
+    .realize__styles {
+      position: absolute;
+      background: url(../assets/images/realize-bg.png);
+      height: 100%;
+      opacity: 0.2;
+      width: 100%;
+      background-size: cover;
+      display: flex;
+
+      .slider1 {
+        position: absolute;
+        left: 4%;
+        top: 47%;
+        display: none;
+
+        @include mobile {
+          display: flex;
+        }
+      }
+
+      .slider2 {
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 32%;
+
+        @include mobile {
+          display: flex;
+        }
+      }
+
+      @include mobile {
+        opacity: 1;
+      }
+
+      &--text {
+        display: flex;
+        flex-direction: column;
+        margin-top: 137px;
+        margin-left: 99px;
+
+        @include mobile {
+          display: none;
+        }
+
+        .text__header {
+          font-family: 'Yeseva One';
+          font-style: normal;
+          font-weight: normal;
+          font-size: 27px;
+          line-height: 37px;
+          text-transform: uppercase;
+          color: $orange;
+          margin-bottom: 2.9375rem;
+        }
+
+        .text__list li {
+          font-family: 'Proxima Nova';
+          font-size: 20px;
+          line-height: 26.5px;
+          color: white;
+          margin-bottom: 1.3625rem;
+
+          &:first-of-type {
+            color: $orange;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      &--photos {
+        display: flex;
+        margin-left: 189px;
+        flex-direction: row;
+
+        @include mobile {
+          display: none;
+        }
+
+        .line1 {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          bottom: -40px;
+
+          @media (max-width: 1415px) {
+            display: none;
+          }
+
+          .top1 {
+            margin-bottom: 35px;
+          }
+        }
+
+        .line2 {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          right: 115px;
+          bottom: 47px;
+
+          @media (max-width: 850px) {
+            display: none;
+          }
+
+          .top2 {
+            margin-bottom: 35px;
+          }
+        }
+      }
+    }
+  }
 }

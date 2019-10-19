@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "devDependencies": {
-    "concurrently": "^4.1.2",
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
@@ -13,10 +12,14 @@
     "style-loader": "^1.0.0",
     "url-loader": "^2.1.0",
     "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.8.2"
   },
   "scripts": {
-    "start": "concurrently \"npm:watch\"",
-    "watch": "webpack --config webpack.config.js --watch"
+    "start": "webpack-dev-server --config webpack.config.js --watch",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "html-loader": "^0.5.5"
   }
 }

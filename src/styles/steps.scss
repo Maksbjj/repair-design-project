@@ -1,26 +1,128 @@
 .steps {
-  height: 770px;
   background-color: $black;
   display: flex;
+  margin-top: -1px;
 
-  .steps__text {
-    flex: 1;
-    background: red;
+  @include desktop {
+    padding: 0 50px;
   }
 
-  .steps__numbers {
-    flex: 1;
+  @media (max-width:900px) {
+    display: none;
+  }
+
+  .steps__text {
     display: flex;
     flex-direction: column;
+    width: 337px;
+    margin-left: 140px;
 
-    .steps {
-      flex: 1;
+    @include mobile @include desktop {
+      margin: 0;
     }
 
-    .photo {
-      flex: 1;
-      background: url(/src/assets/images/steps-photo.png);
-      background-size: cover;
+    .steps__header {
+
+      .header__work {
+        font-family: 'FuturaDemiC';
+        font-size: 0.9375rem;
+        line-height: 1.3125rem;
+        text-transform: uppercase;
+        color: white;
+        margin-bottom: 18px;
+      }
+
+      .header__name {
+        font-family: 'Yeseva One';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 27px;
+        line-height: 37px;
+        text-transform: uppercase;
+        color: $orange;
+        margin-bottom: 92px;
+      }
+
+    }
+
+    .steps__pages {
+      font-family: 'Yeseva One';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.125rem;
+      line-height: 1.5625rem;
+      text-transform: uppercase;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .steps__info {
+
+      .info__header {
+        font-family: 'Yeseva One';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 23px;
+        text-transform: uppercase;
+        color: $orange;
+        margin-bottom: 16px;
+      }
+
+      .info__text {
+        font-family: 'FuturaBook';
+        font-size: 15px;
+        line-height: 25px;
+        color: white;
+      }
+    }
+  }
+
+  .steps__container {
+    margin-top: 65px;
+    margin-left: 136px;
+    padding-bottom: 95px;
+
+
+    .steps__grid {
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      grid-template-rows: repeat(auto-fill, 100px);
+      margin-bottom: 45px;
+
+      .step {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        opacity: 0.3;
+
+        &:first-of-type {
+          opacity: 1;
+        }
+
+        .number {
+          font-family: 'Yeseva One';
+          font-style: normal;
+          font-weight: normal;
+          font-size: 0.9375rem;
+          line-height: 1.3125rem;
+          text-transform: uppercase;
+          margin-bottom: 17px;
+        }
+
+        .text {
+          font-family: 'FuturaBook';
+          font-size: 0.9375rem;
+          line-height: 1.125rem;
+        }
+      }
+    }
+  }
+
+  .steps__image {
+    img {
+      height: 100%;
+      width: 100%;
     }
   }
 }
